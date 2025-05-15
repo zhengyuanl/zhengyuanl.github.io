@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Fira Sans";
+}
+
+#Header {
+    font-weight: bold;
+    font-size: 28px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+nav {
+    display: flex;
+    height: 35px;
+    gap: 20px;
+    border: solid;
+    align-items: center;
+    padding-left: 20px;
+}
+
+nav div a {
+    color: black;
+
+}
+
+nav div.active {
+
+}
+
+.displayImage {
+    width: 200px;
+}
+
+#shoppingGrid {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.displayBox {
+    border: solid;
+    width: 250px;
+    height: 250px;
+}
