@@ -4,20 +4,21 @@
     font-family: "Fira Sans";
 }
 
-#Header {
+header {
     font-weight: bold;
     font-size: 28px;
     margin-top: 20px;
     margin-left: 20px;
+    text-align: center;
+    text-decoration: underline;
 }
 
 nav {
-    display: flex;
     height: 35px;
     gap: 20px;
-    border: solid;
     align-items: center;
     padding-left: 20px;
+    display: flex;
 }
 
 nav div a {
@@ -25,24 +26,88 @@ nav div a {
 
 }
 
-nav div.active {
-
-}
-
 .displayImage {
-    width: 200px;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
 }
 
 #shoppingGrid {
     margin-top: 10px;
     display: grid;
     grid-template-columns: 250px 250px 250px 250px;
-    column-gap: 10px;
+    column-gap: 30px;
     row-gap: 10px;
+    width: 1090px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .displayBox {
-    border: solid;
     width: 250px;
-    height: 250px;
+    height: 300px;
+}
+
+hr {
+    background-color: black;
+    border: none;
+    height: 1px;
+}
+
+#searchButton {
+    position: relative;
+    top: -2px;
+    width: 30px;      /* Make it a square container */
+    height: 30px;
+    transform-origin: center center; /* Set rotation center */
+}
+
+#searchCircle {
+    width: 15px;
+    height: 15px;
+    border: solid;
+    border-radius: 50%;
+    position: relative;
+    left: 50%;   /* Center the circle in the button */
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#searchHandle {
+    width: 0;
+    height: 10px;
+    border-left: solid;
+    position: absolute;
+    left: 24px;    /* Position handle at the edge of the circle */
+    top: 19px;
+    transform: rotate(-45deg);
+}
+
+nav ul {
+    display: flex;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    list-style-type: none;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#cart img {
+    position: relative;
+    width: 50px;
+    right: 10px;
+    top: 3px;
+}
+
+#cart img:hover {
+    filter: invert(40%);
+}
+
+div.label {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1px;
+    padding-right: 3px;
 }

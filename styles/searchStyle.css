@@ -1,0 +1,20 @@
+#searchText {
+    position: absolute;
+    top: 76px;
+    left: 60px;
+    height: 20px;
+    border: none;
+}
+
+#searchText:focus {
+    border: none;
+    outline: none;
+}
+
+#markLine {
+    position: absolute;
+    width: 0px;
+    border-bottom: solid;
+    top: 105px;
+    left: 30px;
+}
