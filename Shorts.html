@@ -5,14 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liu Clothing</title>
     <link rel="stylesheet" href="styles/mainStyle.css">
+    <link rel="stylesheet" href="styles/searchStyle.css">
 </head>
 <body>
-    <div id="Header">LiU Clothing</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <input id="searchText">
+    <div id="markLine"></div>
+    <header>
+        LiU Clothing
+    </header>
+    <hr>
     <nav>
-        <div class="tag"><a href="index.html">Intro</a></div>
-        <div class="tag"><a href="Tees.html">Tees</a></div>
-        <div class="active"><a href="Shorts.html">Shorts</a></div>
-        <div class="tag"><a href="Hoodies.html">Hoddies</a></div>
+        <div id="searchButton"><div id="searchCircle"></div><div id="searchHandle"></div></div>
+        <ul>
+            <li>
+                <div class="tag"><a href="index.html">Intro</a></div>
+            </li>
+            <li>
+                <div class="tag"><a href="Tees.html">Tees</a></div>
+            </li>
+            <li>
+                <div class="active"><a href="Shorts.html">Shorts</a></div>
+            </li>
+            <li>
+                <div class="tag"><a href="Hoodies.html">Hoodies</a></div>
+            </li>
+        </ul>
+        <div id="cart"><img src="images/Cart.png" alt="Visit Your Cart"></div>
     </nav>
+    <hr>
+    <div id="shoppingGrid">
+        <div class="displayBox">
+            <img class="displayImage" src="images/Shorts/001.png">
+            <div class="label"><span>Hate the World</span><span>$19</span></div>
+        </div>
+    </div>
+    <script src="scripts/mainScript.js"></script>
 </body>
 </html>

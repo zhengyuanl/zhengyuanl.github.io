@@ -5,14 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liu Clothing</title>
     <link rel="stylesheet" href="styles/mainStyle.css">
+    <link rel="stylesheet" href="styles/searchStyle.css">
 </head>
 <body>
-    <div id="Header">LiU Clothing</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <input id="searchText">
+    <div id="markLine"></div>
+    <header>
+        LiU Clothing
+    </header>
+    <hr>
     <nav>
-        <div class="tag"><a href="index.html">Intro</a></div>
-        <div class="tag"><a href="Tees.html">Tees</a></div>
-        <div class="active"><a href="Shorts.html">Shorts</a></div>
-        <div class="tag"><a href="Hoodies.html">Hoddies</a></div>
+        <div id="searchButton"><div id="searchCircle"></div><div id="searchHandle"></div></div>
+        <ul>
+            <li>
+                <div class="tag"><a href="index.html">Intro</a></div>
+            </li>
+            <li>
+                <div class="tag"><a href="Tees.html">Tees</a></div>
+            </li>
+            <li>
+                <div class="active"><a href="Shorts.html">Shorts</a></div>
+            </li>
+            <li>
+                <div class="tag"><a href="Hoodies.html">Hoodies</a></div>
+            </li>
+        </ul>
+        <div id="cart"><img src="images/Cart.png" alt="Visit Your Cart"></div>
     </nav>
+    <hr>
+    <div id="shoppingGrid">
+        <div class="displayBox">
+            <img class="displayImage" src="images/Hoodie/001.png">
+            <div class="label"><span>Wo Cao Hoodie</span><span>$39</span></div>
+        </div> 
+        <div class="displayBox">
+            <img class="displayImage" src="images/Hoodie/002.png">
+            <div class="label"><span>Love Cure Hoodie</span><span>$39</span></div>
+        </div>
+    </div>
+    <script src="scripts/mainScript.js"></script>
+    <script>
+        
+        // Store the original src for each image
+        $(".displayImage").each(function(index) {
+            $(this).data("origin-src", $(this).attr("src"));
+        });
+
+        $(".displayImage").on("mouseover", function() {
+            let originLink = $(this).data("origin-src");
+            let srcLink = originLink.substring(0, originLink.length - 4) + "f.png";
+            $(this).animate({opacity: 0.8});
+            $(this).attr("src", srcLink).stop().animate({ opacity: 0.5 }, 100);
+            $(this).animate({ opacity: 1});
+        });
+
+        $(".displayImage").on("mouseout", function() {
+            // Get the original src from data attribute
+            let originLink = $(this).data("origin-src");
+            $(this).attr("src", originLink).stop().animate({ opacity: 1 }, 100);
+        });
+    </script>
 </body>
 </html>
